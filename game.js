@@ -10,6 +10,13 @@ $(document).keypress(function() {
     started = true;
   }
 });
+$(document).click(function() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
 $(".btn").click(function() {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
